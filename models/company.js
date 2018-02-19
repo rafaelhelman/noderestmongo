@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 
-const CustomerSchema = Schema ({
+const CompanySchema = Schema ({
   name: String,
   picture: String,
   ruc: String,
@@ -13,8 +13,7 @@ const CustomerSchema = Schema ({
   cellphone: String,
   address: String,
   city:String,
-  country:String,
-  company:String
+  country:String
 })
 
-module.exports = mongoose.model('Customer', CustomerSchema)
+module.exports = mongoose.model('Company', CompanySchema)

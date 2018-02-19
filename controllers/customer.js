@@ -34,6 +34,8 @@ function saveCustomer(req, res) {
   customer.cellphone = req.body.celphone
   customer.address = req.body.address
   customer.city = req.body.city
+  customer.country = req.body.country
+  customer.company = req.body.company
 
   customer.save((err, customerStored) => {
     if(err) res.status(500).send({message: `Error al intentar guardar: ${err}`})

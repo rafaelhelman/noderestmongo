@@ -2,6 +2,7 @@
 
 const express = require('express')
 const ProductCtrl = require('../controllers/product')
+const CompanyCtrl = require('../controllers/company')
 const CustomerCtrl = require('../controllers/customer')
 const userCtrl = require('../controllers/user')
 const auth = require('../middlewares/auth')
@@ -12,6 +13,12 @@ api.get('/product/:productId', ProductCtrl.getProduct)
 api.put('/product/:productId', ProductCtrl.updateProduct)
 api.post('/product', ProductCtrl.saveProduct)
 api.delete('/product/:productId', ProductCtrl.deleteProduct)
+
+api.get('/company', CompanyCtrl.getCompanies)
+api.get('/company/:companyId', CompanyCtrl.getCompany)
+api.put('/company/:companyId', CompanyCtrl.updateCompany)
+api.post('/company', CompanyCtrl.saveCompany)
+api.delete('/company/:companyId', CompanyCtrl.deleteCompany)
 
 api.get('/customer', CustomerCtrl.getCustomers)
 api.get('/customer/:customerId', CustomerCtrl.getCustomer)
